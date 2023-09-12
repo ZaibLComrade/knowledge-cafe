@@ -10,6 +10,7 @@ export default {
 			"custom-black": "#111",
 			"custom-grey": "#11111160",
 			"custom-blue": "#6047EC",
+			"custom-blue-hover": "#6000CF"
 		},
 	},
   },

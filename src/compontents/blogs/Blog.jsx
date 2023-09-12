@@ -13,7 +13,7 @@ export default function Blog( { content } ) {
 			<div className="flex justify-between mb-4">
 				{/* Author */}	
 				<div className="flex items-center gap-4">
-					<div>
+					<div className="shrink-0">
 						<img className="h-14 w-14 rounded-[50px]" src={ author_img } alt=""/>	
 					</div>
 
@@ -25,7 +25,7 @@ export default function Blog( { content } ) {
 				
 				{/* Others */}
 				<div className="flex items-center gap-2">
-					<p className="text-xl font-medium text-custom-grey">{ reading_time } Mins</p>	
+					<p className="text-xl font-medium text-custom-grey">{ reading_time } min read</p>	
 					<div className="text-2xl"><FaBookmark/></div>
 				</div>
 			</div>
@@ -34,12 +34,12 @@ export default function Blog( { content } ) {
 				<h1 className="text-[40px] font-bold leading-[64px]">{ title }</h1>
 			</div>
 			
-			<div className="flex mb-5 text-custom-grey gap-4">
+			<div className="flex mb-5 text-xl font-medium text-custom-grey gap-4">
 				{hashtags.map((tag, idx) => <p key={idx}>#{tag}</p>)}
 			</div>
 
 			<div>
-				<p className="text-xl font-semibold underline text-custom-blue">Mark as read</p>
+				<p className="text-xl font-semibold underline cursor-pointer w-max hover:text-custom-blue-hover text-custom-blue">Mark as read</p>
 			</div>
 		</div>	
 	)
