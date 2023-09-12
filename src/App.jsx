@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="container mx-auto">
 		<Header></Header>
-		<Blogs></Blogs>
+		<div className="grid grid-cols-3">
+			<Blogs></Blogs>
+		</div>
     </div>
   )
 }

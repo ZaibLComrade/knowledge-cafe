@@ -11,9 +11,8 @@ export default function Blogs() {
 	}, [])	
 
 	return (
-		<>
-		{
-			blogs.map(blog => <Blog key={ blog.id } content={ blog }></Blog>)			
-		}
-		</>)
+			<div className="col-span-2">
+				{blogs.map(blog => <Blog key={ blog.id } content={ blog }></Blog>)}
+			</div>
+	)
 }
