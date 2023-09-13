@@ -6,10 +6,10 @@ import Sidebar from './compontents/sidebar/Sidebar'
 function App() {
 	const [bookmark, setBookmark] = useState([]);
 	const [content, setContent] = useState([]);
-
-	// function handleBookmark(id) {
-	// 	console.log(id);
-	// }
+	
+	function handleBookmark(content) {
+		setBookmark([...bookmark, content.title]);
+	}
 	
 	useEffect(() => {
 		fetch('../public/blogData.json')
@@ -21,8 +21,8 @@ function App() {
 	<div className="container mx-auto">
 		<Header></Header>
 		<div className="grid grid-cols-3 gap-6">
-			<Blogs blogContent={ content }></Blogs>
-			<Sidebar blogContent={ content }></Sidebar>
+			<Blogs blogContent={ content } handleBookmark={ handleBookmark }></Blogs>
+			<Sidebar blogContent={ content } bookmark={ bookmark }></Sidebar>
 		</div>
 	</div>
 	)
