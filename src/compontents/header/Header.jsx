@@ -6,8 +6,8 @@ export default function Header() {
 				<div>
 					<h1 className="text-custom-black text-[40px] font-bold">Knowledge Cafe</h1>
 				</div>
-				<div className="w-max">
-					<img src={profile} alt=""/>
+				<div className="rounded-[50px]">
+					<img src={ profile }/>
 				</div>
 			</div>
 			<hr className="my-8"/>
